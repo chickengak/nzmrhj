@@ -4,7 +4,6 @@ from django.conf.urls.static import static
 from django.conf import settings
 
 urlpatterns = [
-    path("render/", views.my_render_view, name="my_render_view"),
     path("", views.index, name="index"),
     path("left-sidebar/", views.left_sidebar_view, name="left_sidebar_view"),
     path("right-sidebar/", views.left_sidebar_view, name="right_sidebar_view"),
