@@ -15,3 +15,9 @@ def my_render_view(request):
 
 def left_sidebar_view(request):
     return render(request, "left-sidebar.html")
+
+def right_sidebar_view(request):
+    return render(request, "right-sidebar.html")
+
+def no_sidebar_view(request):
+    return render(request, "no-sidebar.html")
