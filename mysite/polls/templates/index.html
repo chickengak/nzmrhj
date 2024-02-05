@@ -103,35 +103,62 @@
 									<section class="box features">
 										<h2 class="major"><span>A Major Heading</span></h2>
 										<div>
-											<div id="inputContainer"></div>
+											<h1>Django 사용자 입력받기</h1>
+											<hr>
+											<form action="{% url 'createform' %}" method="POST">
+												{% csrf_token %}
+												<div>
+												<label for="area">면적</label>
+												<input type="text" name="area" id="area">
+												</div>
+												<div>
+													<label for="trans_floor">거래 층</label>
+													<input type="text" name="trans_floor" id="trans_floor">
+												</div>
+												<div>
+													<label for="com_year">완공년도</label>
+													<input type="text" name="com_year" id="com_year">
+												</div>
+												<div>
+													<label for="interest">금리</label>
+													<input type="text" name="interest" id="interest">
+												</div>
+												<div>
+													<label for="household">세대수</label>
+													<input type="text" name="household" id="household">
+												</div>
+												<div>
+													<label for="top_floor">최고층</label>
+													<input type="text" name="top_floor" id="top_floor">
+												</div>
+												<div>
+													<label for="subway_dist">지하철역까지 거리</label>
+													<input type="text" name="subway_dist" id="subway_dist">
+												</div>
+												<div>
+													<label for="subway_cnt">근처 지하철역 개수</label>
+													<input type="text" name="subway_cnt" id="subway_cnt">
+												</div>
+												<div>
+													<label for="bus_cnt">근처 버스정거장 개수</label>
+													<input type="text" name="bus_cnt" id="bus_cnt">
+												</div>
+												<div>
+													<label for="parking_lot">주차대수</label>
+													<input type="text" name="parking_lot" id="parking_lot">
+												</div>
+												<div>
+													<label for="school">학교 개수</label>
+													<input type="text" name="school" id="school">
+												</div>
+												<div>
+													<label for="hospital">종합병원 개수</label>
+													<input type="text" name="hospital" id="hospital">
+												</div>
 
-											<script>
-												function addData() {
-													var dataList = document.getElementById('dataList');
-													for (var i = 1; i <= 12; i++) {
-														var inputValue = document.getElementById('inputBox' + i).value;
-														var listItem = document.createElement("li");
-														listItem.appendChild(document.createTextNode("Input " + i + ": " + inputValue));
-														dataList.appendChild(listItem);
-													}
-												}
-
-												function createInputBoxes() {
-													var inputContainer = document.getElementById('inputContainer');
-													for (var i = 1; i <= 12; i++) {
-														var inputBox = document.createElement("input");
-														inputBox.setAttribute("type", "text");
-														inputBox.setAttribute("id", "inputBox" + i);
-														inputContainer.appendChild(inputBox);
-													}
-												}
-
-												// 호출하여 페이지 로드 시 입력 상자 생성
-												createInputBoxes();
-											</script>
-
-											<button onclick="addData()">Add Data</button>
-
+												<br>
+												<input type="submit" value="제출">
+											</form>
 										</div>
 									</section>
 

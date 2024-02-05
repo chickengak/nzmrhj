@@ -8,4 +8,5 @@ urlpatterns = [
     path("left-sidebar/", views.left_sidebar_view, name="left_sidebar_view"),
     path("right-sidebar/", views.right_sidebar_view, name="right_sidebar_view"),
     path("no-sidebar/", views.no_sidebar_view, name="no_sidebar_view"),
+    path('createform/', views.createform, name='createform'),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
