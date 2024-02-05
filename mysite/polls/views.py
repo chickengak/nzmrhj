@@ -36,8 +36,7 @@ def createform(request):
         data.parking_lot = request.POST['parking_lot']
         data.school = request.POST['school']
         data.hospital = request.POST['hospital']
-        res = 'myres' #predict_value([data.area, data.trans_floor])
-        res = model_pkl_predict([84.046, 16.0, 2019.0, 3.5, 4932.0, 35.0, 0.3049339773051127, 1.0986122886681098, 3.9512437185814275, 1.45316301703163, 11.0, 0.0])
+        res = model_pkl_predict([84.53, 4.0, 15.0, 3.25, 13.0, 4.574710978503383, 1.1073094867807154, 22.0, 643.0, 0.0, 1.0, 0.0])
         messages.success(request, f'예측 전세가 　 {res} 만원')
 
     return redirect('index')
