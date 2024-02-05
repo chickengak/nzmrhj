@@ -47,7 +47,7 @@ def createform(request):
             except ValueError:
                 messages.success(request, f'올바른 입력을 해주세요!')
                 return redirect('index')
-        user_inputs[5] = np.log(user_inputs[5]+1)
+        user_inputs[5] = np.log(user_inputs_float[5]+1)
         res = model_pkl_predict(user_inputs_float)
         # user_inputs = [84.53, 4.0, 15.0, 3.25, 13.0, 4.574710978503383, 1.1073094867807154, 22.0, 643.0, 0.0, 1.0, 0.0]
         # res = model_pkl_predict(user_inputs)
