@@ -103,7 +103,35 @@
 									<section class="box features">
 										<h2 class="major"><span>A Major Heading</span></h2>
 										<div>
-											<!-- 여기에 데이터를 입력하는 부분을 만들면 좋을 것 같습니다. -->
+											<div id="inputContainer"></div>
+
+											<script>
+												function addData() {
+													var dataList = document.getElementById('dataList');
+													for (var i = 1; i <= 12; i++) {
+														var inputValue = document.getElementById('inputBox' + i).value;
+														var listItem = document.createElement("li");
+														listItem.appendChild(document.createTextNode("Input " + i + ": " + inputValue));
+														dataList.appendChild(listItem);
+													}
+												}
+
+												function createInputBoxes() {
+													var inputContainer = document.getElementById('inputContainer');
+													for (var i = 1; i <= 12; i++) {
+														var inputBox = document.createElement("input");
+														inputBox.setAttribute("type", "text");
+														inputBox.setAttribute("id", "inputBox" + i);
+														inputContainer.appendChild(inputBox);
+													}
+												}
+
+												// 호출하여 페이지 로드 시 입력 상자 생성
+												createInputBoxes();
+											</script>
+
+											<button onclick="addData()">Add Data</button>
+
 										</div>
 									</section>
 
