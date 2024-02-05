@@ -3,11 +3,7 @@ import numpy as np
 import pandas as pd
 
 model_pkl = joblib.load('static/model.pkl')   # 모델 불러오기
-scaler_X = joblib.load('static/scaler_X.pkl') 
-scaler_y = joblib.load('static/scaler_y.pkl')  
-
-def asdf():
-    return 'my_res'
+scaler = joblib.load('static/scaler.pkl')
 
 def model_pkl_predict(input_values:list):
     """
@@ -15,10 +11,9 @@ def model_pkl_predict(input_values:list):
     output: int
     입력된 값으로 예측값을 리턴. scaler_X 와 scaler_y 필요함.
     """
-    #standardized_input = np.append( scaler_X.transform(np.array(input_values[:11]).reshape(1, -1)) , [input_values[11]]) # input_values는 12개의 특성이고 마지막 데이터가 병원이라고 가정함.
-    standardized_input = np.append( scaler_X.transform(pd.DataFrame([input_values[:11]],
-                        columns=['area','trans_floor','com_year','interest','household','top_floor','subway_dist','subway_cnt','bus_cnt','parking_lot','school'])) , [input_values[11]])
+    numeric_features = ['area', 'trans_floor', 'apt_age', 'interest', 'top_floor', 'bus_cnt', 'parking_lot', 'school', 'household']
+    standardized_input = np.append( scaler.transform(pd.DataFrame([input_values[:9]], columns = numeric_features)) , [input_values[9:]])
     res = model_pkl.predict(pd.DataFrame(standardized_input.reshape(1,12),
-                    columns=['area', 'trans_floor', 'com_year', 'interest', 'household', 'top_floor', 'subway_dist', 'subway_cnt', 'bus_cnt', 'parking_lot', 'school', 'hospital'])) # 예측 결과
-    inv_standardized_res = scaler_y.inverse_transform(np.reshape(res, (-1, 1)))      # 역 표준화 된 예측 결과
-    return round(np.exp(inv_standardized_res)[0][0])     # 반올림한 int로 반환. 어차피 만단위 결과니까.
+                    columns=['area', 'trans_floor', 'apt_age', 'interest', 'top_floor', 'bus_cnt', 'parking_lot', 'school', 'household', 'gangnam_3gu', 'ent_type_계단식', 'ent_type_복도식'])) # 예측 결과
+    print(res)
+    return round(np.exp(res[0]))     # 반올림한 int로 반환. 어차피 만단위 결과니까.
