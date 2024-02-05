@@ -24,7 +24,6 @@
 		<title>No Sidebar - TXT by HTML5 UP</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
 	</head>
 	<body class="is-preload">
 		<div id="page-wrapper">
@@ -43,26 +42,7 @@
 				<nav id="nav">
 					<ul>
 						<li><a href="{% url 'index' %}">Home</a></li>
-						<li>
-							<a href="#">Dropdown</a>
-							<ul>
-								<li><a href="#">Lorem ipsum dolor</a></li>
-								<li><a href="#">Magna phasellus</a></li>
-								<li>
-									<a href="#">Phasellus consequat</a>
-									<ul>
-										<li><a href="#">Lorem ipsum dolor</a></li>
-										<li><a href="#">Phasellus consequat</a></li>
-										<li><a href="#">Magna phasellus</a></li>
-										<li><a href="#">Etiam dolore nisl</a></li>
-									</ul>
-								</li>
-								<li><a href="#">Veroeros feugiat</a></li>
-							</ul>
-						</li>
-						<li><a href="{% url 'left_sidebar_view' %}">Left Sidebar</a></li>
-						<li><a href="{% url 'right_sidebar_view' %}">Right Sidebar</a></li>
-						<li class="current"><a href="{% url 'no_sidebar_view' %}">No Sidebar</a></li>
+						<li class="current"><a href="{% url 'no_sidebar_view' %}">VISUALIZATION</a></li>
 					</ul>
 				</nav>
 
@@ -87,7 +67,7 @@
 											</header>
 
 											<section>
-												<span class="image featured"><img src="images/pic05.jpg" alt="" /></span>
+												<span class="image featured"><img src="{% static 'images/pic05.jpg' %}" alt="" /></span>
 												<p>
 													Phasellus quam turpis, feugiat sit amet ornare in, hendrerit in lectus.
 													Praesent semper mod quis eget mi. Etiam eu ante risus. Aliquam erat volutpat.
@@ -147,7 +127,7 @@
 
 													<!-- Feature -->
 														<section class="box feature">
-															<a href="#" class="image featured"><img src="images/pic01.jpg" alt="" /></a>
+															<a href="#" class="image featured"><img src="{% static 'images/pic01.jpg' %}" alt="" /></a>
 															<h3><a href="#">A Subheading</a></h3>
 															<p>
 																Phasellus quam turpis, feugiat sit amet ornare in, a hendrerit in
@@ -160,7 +140,7 @@
 
 													<!-- Feature -->
 														<section class="box feature">
-															<a href="#" class="image featured"><img src="images/pic02.jpg" alt="" /></a>
+															<a href="#" class="image featured"><img src="{% static 'images/pic01.jpg' %}" alt="" /></a>
 															<h3><a href="#">Another Subheading</a></h3>
 															<p>
 																Phasellus quam turpis, feugiat sit amet ornare in, a hendrerit in
@@ -173,7 +153,7 @@
 
 													<!-- Feature -->
 														<section class="box feature">
-															<a href="#" class="image featured"><img src="images/pic03.jpg" alt="" /></a>
+															<a href="#" class="image featured"><img src="{% static 'images/pic01.jpg' %}" alt="" /></a>
 															<h3><a href="#">And Another</a></h3>
 															<p>
 																Phasellus quam turpis, feugiat sit amet ornare in, a hendrerit in
@@ -186,7 +166,7 @@
 
 													<!-- Feature -->
 														<section class="box feature">
-															<a href="#" class="image featured"><img src="images/pic04.jpg" alt="" /></a>
+															<a href="#" class="image featured"><img src="{% static 'images/pic01.jpg' %}" alt="" /></a>
 															<h3><a href="#">And One More</a></h3>
 															<p>
 																Phasellus quam turpis, feugiat sit amet ornare in, a hendrerit in
@@ -257,15 +237,6 @@
 				</footer>
 
 		</div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.dropotron.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
 
 	</body>
 </html>
