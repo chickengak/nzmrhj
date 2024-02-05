@@ -45,10 +45,15 @@
 				</nav>
 
 			<!-- Banner -->
-				<section id="banner">
+				<section id="banner" style="padding: 0;">
 					<div class="content">
 						<h2>Welcome to TXT by HTML5 UP</h2>
 						<p>A free responsive site template built on HTML5, CSS3, and some other stuff</p>
+						{% if messages %}
+						{% for message in messages %}
+							<h2>{{ message }}</h2>
+						{% endfor %}
+					{% endif %}
 						<a href="#main" class="button scrolly">Alright let's go</a>
 					</div>
 				</section>
@@ -134,6 +139,9 @@
 												<br>
 												<input type="submit" value="제출">
 											</form>
+										</div>
+										<div>
+
 										</div>
 									</section>
 

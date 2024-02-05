@@ -2483,7 +2483,7 @@ input, select, textarea {
 		background-repeat: repeat, repeat, no-repeat;
 		background-size: auto, auto, cover;
 		z-index: 1;
-		padding: 11em 0;
+		/*padding: 11em 0;*/
 	}
 
 		#banner .content {
