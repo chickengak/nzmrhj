@@ -58,7 +58,6 @@
 
                                  <header>
                                     <h2>Visualization of Seoul</h2>
-                                    <p>Seoul Apartment Rentals Visualized with Scatter plot on Map</p>
                                     <ul class="meta">
                                        <li class="icon fa-clock"> one day ago</li>
                                        <li class="icon fa-comments"><a href="#">1,024</a></li>
@@ -70,19 +69,12 @@
                                  </section>
 
                                  <section>
-                                    <h3>More intriguing information</h3>
+                                    <h3>서울시 지도를 이용한 아파트 전세가격 밀집도</h3>
                                     <p>
-                                       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac quam risus, at tempus
-                                       justo. Sed dictum rutrum massa eu volutpat. Quisque vitae hendrerit sem. Pellentesque lorem felis,
-                                       ultricies a bibendum id, bibendum sit amet nisl. Mauris et lorem quam. Maecenas rutrum imperdiet
-                                       vulputate. Nulla quis nibh ipsum, sed egestas justo. Morbi ut ante mattis orci convallis tempor.
-                                       Etiam a lacus a lacus pharetra porttitor quis accumsan odio. Sed vel euismod nisi. Etiam convallis
-                                       rhoncus dui quis euismod. Maecenas lorem tellus, congue et condimentum ac, ullamcorper non sapien
-                                       vulputate. Nulla quis nibh ipsum, sed egestas justo. Morbi ut ante mattis orci convallis tempor.
-                                       Etiam a lacus a lacus pharetra porttitor quis accumsan odio. Sed vel euismod nisi. Etiam convallis
-                                       rhoncus dui quis euismod. Maecenas lorem tellus, congue et condimentum ac, ullamcorper non sapien.
-                                       Donec sagittis massa et leo semper a scelerisque metus faucibus. Morbi congue mattis mi.
-                                       Phasellus sed nisl vitae risus tristique volutpat. Cras rutrum commodo luctus.
+                                       아파트 전세 가격 데이터를 사용하여 서울시 지도 위의 밀집도를 확인했습니다.
+                                       이를 토대로 오른쪽 위에 위치한 범례에서는 낮은 전세 가격을 초록색으로, 높은 전세 가격을 빨간색으로 표시하고 있습니다. 
+                                       이러한 색상 척도를 통해 서울시의 아파트 전세 가격의 지역적 분포와 밀도를 시각적으로 확인할 수 있고, 이후 전세 시장에서 동향을 
+                                       파악하고 부동산에 대한 이해를 도울 것 입니다.
                                     </p>
                                  </section>
 								         <section>
@@ -90,28 +82,31 @@
                                  </section>
 
                                  <section>
-                                    <h3>So in conclusion ...</h3>
+                                    <h3>실제값과 예측값 그 사이 어딘가....</h3>
                                     <p>
-                                       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac quam risus, at tempus
-                                       justo. Sed dictum rutrum massa eu volutpat. Quisque vitae hendrerit sem. Pellentesque lorem felis,
-                                       ultricies a bibendum id, bibendum sit amet nisl. Mauris et lorem quam. Maecenas rutrum imperdiet
-                                       vulputate. Nulla quis nibh ipsum, sed egestas justo. Morbi ut ante mattis orci convallis tempor.
-                                       Etiam a lacus a lacus pharetra porttitor quis accumsan odio. Sed vel euismod nisi. Etiam convallis
-                                       rhoncus dui quis euismod. Maecenas lorem tellus, congue et condimentum ac, ullamcorper non sapien.
-                                       Donec sagittis massa et leo semper a scelerisque metus faucibus. Morbi congue mattis mi.
-                                       Phasellus sed nisl vitae.
+                                       모델의 설명력을 나타내기 위한 지표를 조금 더 시각적으로 표현하기 위해서 실제값과 예측값을 비교할 수 있는
+                                       회귀선을 나타냈습니다. 전세 가격 데이터라 어느정도 벗어나는 값들이 있지만 대부분 회귀선 주변에 분포하고 있는 모습을
+                                       확인할 수 있었습니다.
                                     </p>
 
                                     <section>
-                                       <span class="image featured"><img src="{% static 'images/seoul2.png' %}" alt="" /></span>
+                                       <span class="image featured"><img src="{% static 'images/seoulgu.png' %}" alt="" /></span>
                                     </section>
-
+                                    <h4>서울시 구별 아파트 전세값 비교</h4>   
                                     <p>
-                                       Suspendisse laoreet metus ut metus imperdiet interdum aliquam justo tincidunt. Mauris dolor urna,
-                                       fringilla vel malesuada ac, dignissim eu mi. Praesent mollis massa ac nulla pretium pretium.
-                                       Maecenas tortor mauris, consectetur pellentesque dapibus eget, tincidunt vitae arcu.
-                                    </p>
+                                       서울시 구별로 아파트 전세 가격의 최대, 평균, 최소를 나타냈습니다. 각 구별로 모습을 쉽게 확인할 수 있었고 강남구, 마포구, 서초구, 성동구,
+                                       송파구등 높은 가격을 형성하는 구가 있습니다.
+                                   </p>
                                  </section>
+
+                                 <section>
+                                    <span class="image featured"><img src="{% static 'images/price.png' %}" alt="" /></span>
+                                 </section>
+                                 <h4>서울시 전세 가격 평균과 계약일</h4>   
+                                 <p>
+                                    계약일에 따른 서울시 전세 가격 아파트 평균의 변화
+                                </p>
+                              </section>
 
                               </article>
 
@@ -129,10 +124,9 @@
                                        <!-- Feature -->
                                           <section class="box feature">
                                              <a href="#" class="image featured"><img src="{% static 'images/seoul.png' %}" alt="" /></a>
-                                             <h3><a href="#">A Subheading</a></h3>
+                                             <h3><a href="#">서울시 지도를 이용한 아파트 전세가격 밀집도</a></h3>
                                              <p>
-                                                Phasellus quam turpis, feugiat sit amet ornare in, a hendrerit in
-                                                lectus dolore. Praesent semper mod quis eget sed etiam eu ante risus.
+                                                Price density of leased apartments in Seoul using Seoul city map
                                              </p>
                                           </section>
 
@@ -142,10 +136,10 @@
                                        <!-- Feature -->
                                           <section class="box feature">
                                              <a href="#" class="image featured"><img src="{% static 'images/seoul3.png' %}" alt="" /></a>
-                                             <h3><a href="#">Another Subheading</a></h3>
+                                             <h3><a href="#">실제값과 예측값</a></h3>
                                              <p>
-                                                Phasellus quam turpis, feugiat sit amet ornare in, a hendrerit in
-                                                lectus dolore. Praesent semper mod quis eget sed etiam eu ante risus.
+                                                In order to compare actual and predicted values ​​and make them easier to understand, 
+                                                they are expressed through regression lines.
                                              </p>
                                           </section>
 
@@ -154,11 +148,10 @@
 
                                        <!-- Feature -->
                                           <section class="box feature">
-                                             <a href="#" class="image featured"><img src="{% static 'images/pic01.jpg' %}" alt="" /></a>
-                                             <h3><a href="#">And Another</a></h3>
-                                             <p>
-                                                Phasellus quam turpis, feugiat sit amet ornare in, a hendrerit in
-                                                lectus dolore. Praesent semper mod quis eget sed etiam eu ante risus.
+                                             <a href="#" class="image featured"><img src="{% static 'images/seoulgu.png' %}" alt="" /></a>
+                                             <h3><a href="#">서울시 구별 아파트 전세값 비교</a></h3>
+                                             <p>                                             
+                                                It shows the maximum, average, and minimum apartment rental prices by Seoul city. 
                                              </p>
                                           </section>
 
@@ -167,11 +160,10 @@
 
                                        <!-- Feature -->
                                           <section class="box feature">
-                                             <a href="#" class="image featured"><img src="{% static 'images/pic01.jpg' %}" alt="" /></a>
-                                             <h3><a href="#">And One More</a></h3>
+                                             <a href="#" class="image featured"><img src="{% static 'images/price.png' %}" alt="" /></a>
+                                             <h3><a href="#">서울시 전세 가격 평균과 계약일</a></h3>
                                              <p>
-                                                Phasellus quam turpis, feugiat sit amet ornare in, a hendrerit in
-                                                lectus dolore. Praesent semper mod quis eget sed etiam eu ante risus.
+                                                A graph shows the change in the average rent price apartment in Seoul according to the contract date.
                                              </p>
                                           </section>
 
@@ -217,7 +209,7 @@
                               <ul class="contact">
                                  <li><a class="icon brands fa-facebook-f" href="#"><span class="label">Facebook</span></a></li>
                                  <li><a class="icon brands fa-twitter" href="#"><span class="label">Twitter</span></a></li>
-                                 <li><a class="icon brands fa-instagram" href="#"><span class="label">Instagram</span></a></li>
+                                 <li><a class="icon brands fa-instagram" href="https://www.instagram.com/molit.go.kr?igsh=NTc4MTIwNjQ2YQ=="><span class="label">Instagram</span></a></li>
                                  <li><a class="icon brands fa-dribbble" href="#"><span class="label">Dribbble</span></a></li>
                                  <li><a class="icon brands fa-linkedin-in" href="#"><span class="label">LinkedIn</span></a></li>
                               </ul>
